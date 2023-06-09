@@ -1,0 +1,45 @@
+#springdoc:
+#  swagger-ui:
+#    path: /doc/swagger-ui
+#    try-it-out-enabled: false
+#  api-docs:
+#     path: /doc/api
+#  writer-with-default-pretty-printer: true
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  h2:
+    console:
+      enabled: true
+      path: /dev/h2-console
+      settings.trace: false
+      settings.web-allow-others: true
+  jpa:
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/Stable_Management
+    username: sa
+    password: sa
+
+sm:
+  jwt:
+    # in Duration
+    validity: 5h
+    refresh-validity: 5d
+    secret: jkasdlasdaosdhasdnkjsn38nasdno2K1na!sa#1s
+    user-scheduler:
+      # 5 min in millis
+      schedule: 300000
+
+app:
+  corsAllowedOrigin: '*'

@@ -1,10 +1,10 @@
-package de.kisters.stablemanagement.horse.reservation.service;
+package de.kisters.stablemanagement.reservation.service;
 
-import de.kisters.stablemanagement.horse.reservation.model.dto.CreateReservationDto;
-import de.kisters.stablemanagement.horse.reservation.model.dto.ReservationDto;
-import de.kisters.stablemanagement.horse.reservation.model.entity.Reservation;
-import de.kisters.stablemanagement.horse.reservation.model.mapper.ReservationMapper;
-import de.kisters.stablemanagement.horse.reservation.repository.ReservationRepository;
+import de.kisters.stablemanagement.reservation.model.dto.CreateReservationDto;
+import de.kisters.stablemanagement.reservation.model.dto.ReservationDto;
+import de.kisters.stablemanagement.reservation.model.entity.Reservation;
+import de.kisters.stablemanagement.reservation.model.mapper.ReservationMapper;
+import de.kisters.stablemanagement.reservation.repository.ReservationRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -13,7 +13,6 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {

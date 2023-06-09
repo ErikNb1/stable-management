@@ -1,7 +1,7 @@
-package de.kisters.stablemanagement.horse.reservation.service;
+package de.kisters.stablemanagement.reservation.service;
 
-import de.kisters.stablemanagement.horse.reservation.model.dto.CreateReservationDto;
-import de.kisters.stablemanagement.horse.reservation.model.dto.ReservationDto;
+import de.kisters.stablemanagement.reservation.model.dto.CreateReservationDto;
+import de.kisters.stablemanagement.reservation.model.dto.ReservationDto;
 
 import java.util.List;
 

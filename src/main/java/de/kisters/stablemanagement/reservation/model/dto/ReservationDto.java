@@ -1,4 +1,4 @@
-package de.kisters.stablemanagement.horse.reservation.model.dto;
+package de.kisters.stablemanagement.reservation.model.dto;
 
 import de.kisters.stablemanagement.stable.model.dto.BuildingDto;
 import de.kisters.stablemanagement.user.model.dto.UserDto;

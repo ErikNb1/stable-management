@@ -1,8 +1,8 @@
-package de.kisters.stablemanagement.horse.reservation.controller;
+package de.kisters.stablemanagement.reservation.controller;
 
-import de.kisters.stablemanagement.horse.reservation.model.dto.CreateReservationDto;
-import de.kisters.stablemanagement.horse.reservation.model.dto.ReservationDto;
-import de.kisters.stablemanagement.horse.reservation.service.ReservationService;
+import de.kisters.stablemanagement.reservation.model.dto.CreateReservationDto;
+import de.kisters.stablemanagement.reservation.model.dto.ReservationDto;
+import de.kisters.stablemanagement.reservation.service.ReservationService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

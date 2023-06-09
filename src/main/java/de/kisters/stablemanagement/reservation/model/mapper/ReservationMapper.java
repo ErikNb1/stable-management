@@ -1,8 +1,8 @@
-package de.kisters.stablemanagement.horse.reservation.model.mapper;
+package de.kisters.stablemanagement.reservation.model.mapper;
 
-import de.kisters.stablemanagement.horse.reservation.model.dto.CreateReservationDto;
-import de.kisters.stablemanagement.horse.reservation.model.dto.ReservationDto;
-import de.kisters.stablemanagement.horse.reservation.model.entity.Reservation;
+import de.kisters.stablemanagement.reservation.model.dto.CreateReservationDto;
+import de.kisters.stablemanagement.reservation.model.dto.ReservationDto;
+import de.kisters.stablemanagement.reservation.model.entity.Reservation;
 import de.kisters.stablemanagement.stable.service.StableService;
 import de.kisters.stablemanagement.user.service.UserService;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package de.kisters.stablemanagement.horse.reservation.model.dto;
+package de.kisters.stablemanagement.reservation.model.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

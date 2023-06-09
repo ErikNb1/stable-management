@@ -1,4 +1,4 @@
-package de.kisters.stablemanagement.horse.reservation.model.entity;
+package de.kisters.stablemanagement.reservation.model.entity;
 
 import de.kisters.stablemanagement.stable.model.entity.Building;
 import de.kisters.stablemanagement.user.model.entity.User;

@@ -10,4 +10,6 @@ import java.util.List;
 public interface ReservationRepository extends JpaRepository<Reservation, Integer> {
     @Query("SELECT r FROM Reservation r WHERE r.reservedFrom BETWEEN :from AND :to AND r.reservedPlaced.id = :stableId")
     List<Reservation> getAllBetween(int stableId, LocalDateTime from, LocalDateTime to);
+    @Query("SELECT r FROM Reservation r WHERE r.reservedFrom BETWEEN :from AND :to AND r.reservedPlaced.id = :stableId")
+    List<Reservation> findReservationOnThisTimeAndBuilding(int stableId, LocalDateTime from, LocalDateTime to);
 }

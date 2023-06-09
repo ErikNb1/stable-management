@@ -5,6 +5,7 @@ import de.kisters.stablemanagement.reservation.model.dto.ReservationDto;
 import de.kisters.stablemanagement.reservation.model.entity.Reservation;
 import de.kisters.stablemanagement.reservation.model.mapper.ReservationMapper;
 import de.kisters.stablemanagement.reservation.repository.ReservationRepository;
+import de.kisters.stablemanagement.util.exception.NoSpaceInBuildingException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -27,7 +28,15 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public ReservationDto createReservation(CreateReservationDto dto) {
-        return reservationMapper.mapToDto(reservationRepository.save(reservationMapper.mapCreationToEntity(dto)));
+        Reservation reservation = reservationMapper.mapCreationToEntity(dto);
+        List<Reservation> reservations = reservationRepository.findReservationOnThisTimeAndBuilding(reservation.getReservedPlaced().getId(), reservation.getReservedFrom(), reservation.getReservedTo());
+        if(reservations.isEmpty()) {
+            return reservationMapper.mapToDto(reservationRepository.save(reservation));
+        } else if (reservations.size() < reservation.getReservedPlaced().getType().getCapacity()) {
+            return reservationMapper.mapToDto(reservationRepository.save(reservation));
+        } else {
+            throw new NoSpaceInBuildingException("Reservation can't placed in this time range and building");
+        }
     }
 
     @Override

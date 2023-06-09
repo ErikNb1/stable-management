@@ -8,4 +8,8 @@ public enum BuildingType {
     BuildingType(int capacity) {
         this.capacity = capacity;
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
 }

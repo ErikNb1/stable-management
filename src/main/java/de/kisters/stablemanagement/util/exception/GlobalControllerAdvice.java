@@ -1,5 +1,6 @@
-package de.kisters.stablemanagement.util.exception.exception;
+package de.kisters.stablemanagement.util.exception;
 
+import de.kisters.stablemanagement.util.exception.exception.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,6 +44,20 @@ public class GlobalControllerAdvice {
   @ExceptionHandler(NoEntityFoundException.class)
   @ResponseStatus(HttpStatus.NOT_FOUND)
   public ResponseEntity<ErrorDto> handleNoEntityFoundException(NoEntityFoundException ex) {
+    logError(ex);
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorDto(ex.getMessage()));
+  }
+
+  @ExceptionHandler(NoSpaceInBuildingException.class)
+  @ResponseStatus(HttpStatus.NOT_FOUND)
+  public ResponseEntity<ErrorDto> handleNoSpaceInBuildingException(NoSpaceInBuildingException ex) {
+    logError(ex);
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorDto(ex.getMessage()));
+  }
+
+  @ExceptionHandler(UserNotPermittedException.class)
+  @ResponseStatus(HttpStatus.NOT_FOUND)
+  public ResponseEntity<ErrorDto> handleUserNotPermittedException(UserNotPermittedException ex) {
     logError(ex);
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorDto(ex.getMessage()));
   }

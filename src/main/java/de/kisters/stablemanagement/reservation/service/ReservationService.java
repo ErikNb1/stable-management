@@ -7,10 +7,7 @@ import java.util.List;
 
 public interface ReservationService {
     ReservationDto createReservation(CreateReservationDto dto);
-
     List<ReservationDto> getAllForTodayByStable(int stableId);
-
     List<ReservationDto> getAllForWeekByStable(int stableId);
-
     List<ReservationDto> getAllForMonthByStable(int stableId);
 }

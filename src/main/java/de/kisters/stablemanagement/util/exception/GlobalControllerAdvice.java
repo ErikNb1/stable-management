@@ -22,23 +22,8 @@ public class GlobalControllerAdvice {
     logError(ex);
     return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(new ErrorDto(ex.getMessage()));
   }
-
   private void logError(Throwable ex) {
     log.error("Exception handled: ", ex);
-  }
-
-  @ExceptionHandler({BadArgumentsException.class, NotEditableException.class})
-  @ResponseStatus(HttpStatus.BAD_REQUEST)
-  public ResponseEntity<ErrorDto> handleBadArgumentsException(BadArgumentsException ex) {
-    logError(ex);
-    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ErrorDto(ex.getMessage()));
-  }
-
-  @ExceptionHandler(NoDataFoundException.class)
-  @ResponseStatus(HttpStatus.NOT_FOUND)
-  public ResponseEntity<ErrorDto> handleNoDataFoundException(NoDataFoundException ex) {
-    logError(ex);
-    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorDto(ex.getMessage()));
   }
 
   @ExceptionHandler(NoEntityFoundException.class)
@@ -47,28 +32,18 @@ public class GlobalControllerAdvice {
     logError(ex);
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorDto(ex.getMessage()));
   }
-
   @ExceptionHandler(NoSpaceInBuildingException.class)
   @ResponseStatus(HttpStatus.NOT_FOUND)
   public ResponseEntity<ErrorDto> handleNoSpaceInBuildingException(NoSpaceInBuildingException ex) {
     logError(ex);
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorDto(ex.getMessage()));
   }
-
   @ExceptionHandler(UserNotPermittedException.class)
   @ResponseStatus(HttpStatus.NOT_FOUND)
   public ResponseEntity<ErrorDto> handleUserNotPermittedException(UserNotPermittedException ex) {
     logError(ex);
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorDto(ex.getMessage()));
   }
-
-  @ExceptionHandler({NotAllowedForAdHocReportException.class, NotAuthorizedForReport.class})
-  @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
-  public ResponseEntity<ErrorDto> handleNotAllowedForAdHocReportException(NotAllowedForAdHocReportException ex) {
-    logError(ex);
-    return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(new ErrorDto(ex.getMessage()));
-  }
-
   @ExceptionHandler(MethodArgumentNotValidException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   public ResponseEntity<ErrorDto> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {

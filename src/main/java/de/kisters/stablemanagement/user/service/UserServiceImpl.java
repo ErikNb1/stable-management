@@ -2,7 +2,6 @@ package de.kisters.stablemanagement.user.service;
 
 import de.kisters.stablemanagement.user.model.dto.UserDto;
 import de.kisters.stablemanagement.user.model.dto.LoginDto;
-import de.kisters.stablemanagement.user.model.dto.UserEditDto;
 import de.kisters.stablemanagement.user.model.dto.UserRegistrationDto;
 import de.kisters.stablemanagement.user.model.mapper.UserMapper;
 import de.kisters.stablemanagement.user.model.entity.User;
@@ -20,10 +19,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 @Service
 @Slf4j

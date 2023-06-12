@@ -12,12 +12,10 @@ import de.kisters.stablemanagement.user.model.dto.LoginDto;
 import de.kisters.stablemanagement.user.model.entity.Role;
 import de.kisters.stablemanagement.user.model.entity.User;
 import de.kisters.stablemanagement.user.service.UserService;
-import de.kisters.stablemanagement.util.exception.UserNotPermittedException;
 import de.kisters.stablemanagement.util.exception.exception.NoEntityFoundException;
+import de.kisters.stablemanagement.util.exception.exception.UserNotPermittedException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class StableServiceImpl implements StableService {

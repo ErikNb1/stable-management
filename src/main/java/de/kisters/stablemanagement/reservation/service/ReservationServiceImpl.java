@@ -5,7 +5,7 @@ import de.kisters.stablemanagement.reservation.model.dto.ReservationDto;
 import de.kisters.stablemanagement.reservation.model.entity.Reservation;
 import de.kisters.stablemanagement.reservation.model.mapper.ReservationMapper;
 import de.kisters.stablemanagement.reservation.repository.ReservationRepository;
-import de.kisters.stablemanagement.util.exception.NoSpaceInBuildingException;
+import de.kisters.stablemanagement.util.exception.exception.NoSpaceInBuildingException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

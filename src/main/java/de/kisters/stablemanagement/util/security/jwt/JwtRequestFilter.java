@@ -4,7 +4,7 @@ package de.kisters.stablemanagement.util.security.jwt;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.kisters.stablemanagement.util.exception.exception.AuthenticationException;
-import de.kisters.stablemanagement.util.exception.exception.ErrorDto;
+import de.kisters.stablemanagement.util.exception.ErrorDto;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

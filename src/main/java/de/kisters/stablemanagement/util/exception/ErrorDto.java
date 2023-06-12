@@ -1,4 +1,4 @@
-package de.kisters.stablemanagement.util.exception.exception;
+package de.kisters.stablemanagement.util.exception;
 
 import lombok.Getter;
 import lombok.Setter;
